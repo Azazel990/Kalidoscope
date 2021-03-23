@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrapp.css">
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<script src="js/jquery.js">
+		
+	</script>
+<script src="js/bootstrap.js"></script>
+ <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script >
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+
+	</script>
+<style type="text/css">
+	.heading {
+		position: absolute;
+		z-index: 2;
+		margin-top: 0;
+		left: 35%;
+		letter-spacing: 3px;
+		padding-top: 12%;
+		font-size: 60px;
+		font-family: comic sans ms;	
+		animation-name: head;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
+	}
+	@keyframes head
+	{
+		 0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+	}
+	.jumbotron
+	{
+		height: 500px;
+		color: white;
+		background-color: transparent;
+	}
+	  .navbar 
+	  {
+
+    margin-bottom: 0;
+    background-color: transparent;
+    z-index: 3;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: white !important;
+    background-color: #f4511e !important;
+  }
+  .navbar .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+    }
+
+  ul li a
+  {
+  	position: absolute;
+  	color: white;
+  }
+  h3
+  {
+  	font-size: 45px;
+  	font-family: sans-serif;
+  	letter-spacing: 2px;
+   }
+
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  } 
+  .w3-container
+  {
+  	margin-left: 40px
+  } 
+  img{
+  	height: 250px;
+  	  }
+  .w3-btn
+  {
+  	background-color: transparent;
+  	transition: 0.5s;
+  	font-size: 20px;
+  	border: 2px solid;
+  	border-color: #f4511e;  
+  }
+  .w3-btn:hover
+  {
+  	background-color: #f4511e;
+  	color: white;
+  }
+  .container-fluid
+  {
+  	margin-left: 20px;
+  }
+
+
+
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.layer
+{
+	position: absolute;
+	z-index: 1;
+	height: 500px;
+	width: 100%;
+	background:rgba(0,0,0,0.63); 
+}
+.bgg
+ {
+ 	position: absolute;
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	background-position: center;
+ 	width:100%;
+ 	height: 500px;
+ 	animation: slideshow 20s infinite;
+ 	box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5),8px 8px 8px 8px rgba(0,0,0,0.5);
+ }
+   .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    visibility: visible;
+  }
+   @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+
+@keyframes slideshow
+{
+		0%
+		{
+			background-image:  url('img/ss/1.jpg');
+
+
+		}
+		10%
+		{
+			background-image: url('img/ss/1.jpg');
+		}
+		10.01%
+		{
+			background-image: url('img/ss/2.jpg');
+		}
+		20%
+		{
+			background-image: url('img/ss/2.jpg');
+		}
+		20.01%
+		{
+			background-image: url('img/ss/12.png');	
+		}
+		30%
+		{
+			background-image: url('img/ss/12.png');
+		}
+		30.01%
+		{
+			background-image: url('img/ss/13.jpg');
+		}
+		40%
+		{
+			background-image: url('img/ss/13.jpg');
+		}
+		40.01%
+		{
+			background-image: url('img/ss/14.jpg');
+		}
+		50%
+		{
+			background-image: url('img/ss/14.jpg');
+		}
+		50.01%
+		{
+			background-image: url('img/ss/16.jpg');
+		}
+		60%
+		{
+			background-image: url('img/ss/16.jpg');
+		}
+		60.01%
+		{
+			background-image: url('img/ss/8.jpg');
+		}
+		70%
+		{
+			background-image: url('img/ss/8.jpg');
+		}
+		70.01%
+		{
+			background-image: url('img/ss/21.jpg');
+		}
+		80%
+		{
+			background-image: url('img/ss/21.jpg');
+		}
+		80.01%
+		{
+			background-image: url('img/ss/car.jpg');
+		}
+		90%
+		{
+			background-image: url('img/ss/car.jpg');
+		}
+		90.01%
+		{
+			background-image: url('img/ss/10.jpg');
+		}
+		100%
+		{
+			background-image: url('img/ss/10.jpg');
+		}
+}
+.gallery
+{
+	height: 780px;
+	width: 100%;
+	background-color: #f4511e;
+	margin-top: 40px;
+}
+.content ul
+{
+	list-style: none;
+
+}
+.content ul  li
+{
+	display: inline-block;
+	}
+.content img 
+{	
+	height: 200px;
+	width: 350px;
+	border: 3px white solid;
+
+}
+li p
+{
+	font-size: 10px;
+	padding-top: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.card
+{
+	height: 250px;
+	width: 350px;
+	background-color: white;
+	margin-left: 50px; 
+	margin-top: 60px;
+	padding:0;
+  transition: 0.7s; 
+}
+.card:hover
+{
+		transition: 0.7s ease-out;
+	box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5),8px 8px 8px 8px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+.container-fluid
+{
+  width: 100%;
+  background: 
+  margin-left: 0px;
+  transition: 0.5s;
+}
+
+.container-fluid:hover .panel
+{
+  filter: blur(5px);
+  transform: scale(.7);
+  transition: 0.5s;
+}
+
+.container-fluid .panel:hover
+{
+  filter: blur(0px); 
+  transform: scale(1.5);
+}
+.panel 
+{
+  transition: 0.5s;
+}
+.panel-heading h2
+.panel {
+    border: 1px solid #f4511e; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    transition: 0.6s;
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+
+  .team
+  {
+  	height: 1200px;
+  	width: 100%;
+  	background-color: #f4511e;
+
+  }
+  .icard
+  {
+  	height: 450px;
+  	width: 300px;
+  	background-color: lightgrey;
+  	margin-left: 25px;
+  	margin-top: 30px;
+    transition: 0.7s;
+  }
+  .icard:hover
+  {
+  	transition: 0.7s ease-out;
+	box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.5),8px 8px 8px 8px rgba(0,0,0,0.5);
+	cursor: pointer;
+  }
+  ul
+  {
+  	list-style-type: none;
+
+  }
+  ul li
+  {
+  	display: inline-block;
+  	padding-left: 65px;
+  }
+  .icard p
+  {
+  	font-size: 12px;
+  }
+</style>
+
+</head>
+
+
+<body>
+<div class="bgg">
+</div>
+
+	<!--slideshow-->
+
+	<div class="layer">
+ 
+	</div>
+
+	<nav class="navbar w3-animate-top">
+  	<div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#team">TEAM</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+	</nav>
+
+
+	<div class="jumbotron">
+	<h2 class=" w3-center heading ">Kaleidoscope</h2>
+	</div>
+
+	<!--About-->
+	<div id="about" class="container-fluid ">
+  <div class="row">
+    <div class="col-sm-8 w3-animate-left">
+      <h2>About Company Page</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="w3-btn">Get in Touch</button>
+    </div>
+    <div class="col-sm-4">
+      <img src="company.png" class="w3-animate-right">
+    </div>
+  </div>
+	</div>
+
+	<div class="gallery">
+		<h3 style="color: white; font-family: Montserrat; text-align: center; padding-top: 3%; font-size: 55px;">Gallery</h3>
+		<div class="content">
+		<ul>
+			<!--1-->
+			<li class="card slideanim"><img src="img/ss/4.jpg" onclick="document.getElementById('modal01').style.display='block'" ><p>THE WORLD IS A BOOK AND THOSE WHO DO NOT TRAVEL READ ONLY A PAGE.” ~ SAINT AUGUSTINEs</p></li>
+			<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/4.jpg" style="width:100%;height: 100%;">
+</div>
+<!--2-->
+			<li class="card slideanim"><img src="img/ss/22.jpg " onclick="document.getElementById('modal02').style.display='block'"><p>TNOT ALL THOSE WHO WANDER ARE LOST”<br> ~ J.R.R. TOLKIEN</p></li> 
+			<div id="modal02" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/22.jpg" style="width:100%;height: 100%;">
+</div>
+
+			<li class="card slideanim"> <img src="img/ss/23.jpg" onclick="document.getElementById('modal03').style.display='block'"><p>“LIFE IS EITHER A DARING ADVENTURE OR NOTHING AT ALL” ~ HELEN KELLER</p></li>
+			<div id="modal03" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/23.jpg" style="width:100%;height: 100%;">
+</div>
+			<li class="card slideanim"><img src="img/ss/24.jpg" onclick="document.getElementById('modal04').style.display='block'"><p>“TAKE ONLY MEMORIES, LEAVE ONLY FOOTPRINTS” ~ CHIEF SEATTLE</p> </li>
+			<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/24.jpg" style="width:100%;height: 100%;">
+</div>
+			<li class="card slideanim"><img src="img/ss/25.jpg" onclick="document.getElementById('modal05').style.display='block'"> <p>“NEVER GO ON TRIPS WITH ANYONE YOU DO NOT LOVE.” ~ HEMMINGWAY</p></li>
+
+			<div id="modal05" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/25.jpg" style="width:100%;height: 100%;">
+</div>
+			<li class="card slideanim"><img src="img/ss/26.jpg" onclick="document.getElementById('modal06').style.display='block'"><p>“TRAVEL DOESN'T BECOME ADVENTURE UNTIL YOU LEAVE YOURSELF BEHIND”</p></li>	
+			<div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-container w3-padding-16 w3-display-topright" style="color: white;">×</span>
+  <img class="w3-modal-content w3-animate-zoom" src="img/ss/26.jpg" style="width:100%;height: 100%;">
+</div>
+		</ul>
+		</div>
+	</div>
+
+	<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h1 style="font-size: 65px; padding-top: 40px;  font-family: Montserrat;">Pricing</h1>
+    <h4>Choose a payment plan that works for you</h4>
+  </div>
+  <div class="row slideanim" style="padding-top: 40px;">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Basic</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>20</strong> Lorem</p>
+          <p><strong>15</strong> Ipsum</p>
+          <p><strong>5</strong> Dolor</p>
+          <p><strong>2</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$19</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Pro</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>50</strong> Lorem</p>
+          <p><strong>25</strong> Ipsum</p>
+          <p><strong>10</strong> Dolor</p>
+          <p><strong>5</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$29</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Premium</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>100</strong> Lorem</p>
+          <p><strong>50</strong> Ipsum</p>
+          <p><strong>25</strong> Dolor</p>
+          <p><strong>10</strong> Sit</p>
+          <p><strong>Endless</strong> Amet</p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">Sign Up</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!--TEAM-->
+
+<div class="team row" id="team">
+	<h2 class="w3-center slideanim" style="padding-top: 40px; color: white; font-family: Montserrat; font-size: 48px;">Our Team</h2>
+	<h4 class="w3-center slideanim" style="color: white; font-family: Montserrat;">Get in Touch with our team of professional photographers,editors & advertisers.</h4>
+
+<ul>
+	<li>
+	<div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Sponsorship Head </b> </h4>
+		<img src="avtarm.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mr X</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrXsponspor.blogspot.com</a> </p>
+	</div></li>
+
+<li>
+	<div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Marketing Head </b> </h4>
+		<img src="avtarf.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mrs Y</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrsYmarket.blogspot.com</a> </p>
+	</div></li>
+
+
+	<li><div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Advertising Head </b> </h4>
+		<img src="avtarm.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mr Z</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrZsponspor.blogspot.com</a> </p>
+	</div></li>
+
+	<li><div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Bussiness Head </b> </h4>
+		<img src="avtarf.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mrs X</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrZsponspor.blogspot.com</a> </p>
+	</div></li>
+
+	<li><div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Travel team Head </b> </h4>
+		<img src="avtarf.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mrs Y</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrZsponspor.blogspot.com</a> </p>
+	</div></li>
+
+	<li><div class="icard slideanim">
+		<h4 class="w3-center" style="color: black; padding-top: 20px;"><b> Photography team Head </b> </h4>
+		<img src="avtarm.png" style="height: 250px; width: 100%;">
+		<h4 class="w3-center" style="padding-bottom: 0;"><b style="padding-bottom: 0;"> Mr M</b> </h4>
+		<p style="padding-top: 0;margin-top: 0; padding-left: 10px; font-weight: bold">Email : <a href="#"> gkasgd113@gmail.com </a> <br> Blog : <a href="#"> MrZsponspor.blogspot.com</a> </p>
+	</div></li>
+</ul>
+</div>
+
+</body>
+</html>
